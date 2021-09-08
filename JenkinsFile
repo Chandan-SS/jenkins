@@ -29,9 +29,11 @@ pipeline {
                 echo "Going to use server creds for deployement: ${SERVER_CREDS}"
                 withCredentials([
                     usernamePassword(credentialsId: 'server-creds-for-testing', usernameVariable: 'username ', passwordVariable: 'password')
-                    ])
-                echo "UserName Var: ${username}"
-                echo "Password Var: ${password}"
+                ])  {
+                        echo "UserName Var: ${username}"
+                        echo "Password Var: ${password}"
+                }
+                
             }
         }
     }
