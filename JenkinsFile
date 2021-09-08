@@ -33,7 +33,6 @@ pipeline {
                         echo "UserName Var: ${SERVER_CREDS}"
                         echo "Password Var: ${SERVER_CREDS_PSW}"
                 }
-                
             }
         }
     }
