@@ -28,10 +28,10 @@ pipeline {
                 echo "Deploying application"
                 //echo "Going to use server creds for deployement: ${SERVER_CREDS}"
                 withCredentials([
-                    usernamePassword(credentialsId: 'server-creds-for-testing', usernameVariable: USER, passwordVariable: PSSW)
+                    usernamePassword(credentialsId: 'server-creds-for-testing', usernameVariable: SERVER_CREDS, passwordVariable: SERVER_CREDS_PSW)
                 ])  {
-                        echo "UserName Var: ${USER}"
-                        echo "Password Var: ${PSSW}"
+                        echo "UserName Var: ${usernameVariable}"
+                        echo "Password Var: ${passwordVariable}"
                 }
                 
             }
