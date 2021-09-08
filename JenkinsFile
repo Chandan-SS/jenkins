@@ -30,8 +30,8 @@ pipeline {
                 withCredentials([
                     usernamePassword(credentialsId: 'server-creds-for-testing', usernameVariable: SERVER_CREDS, passwordVariable: SERVER_CREDS_PSW)
                 ])  {
-                        echo "UserName Var: ${usernameVariable}"
-                        echo "Password Var: ${passwordVariable}"
+                        echo "UserName Var: ${SERVER_CREDS}"
+                        echo "Password Var: ${SERVER_CREDS_PSW}"
                 }
                 
             }
